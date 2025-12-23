@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulia Cosmetics - Kecantikan Asli Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Aulia Cosmetics</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#categories">Kategori</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Kecantikan Alami dengan Aulia Cosmetics</h1>
+                <p>Produk kecantikan berkualitas tinggi dengan harga terjangkau. Temukan warna yang sempurna untuk setiap momen spesialmu.</p>
+                <a href="#products" class="btn">Jelajahi Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Cari produk...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="category-filter">Kategori:</label>
+                    <select id="category-filter">
+                        <option value="all">Semua Kategori</option>
+                        <option value="blushon">Blush On</option>
+                        <option value="cushion">Cushion</option>
+                        <option value="lipstik">Lipstik</option>
+                        <option value="eyeshadow">Eyeshadow</option>
+                        <option value="maskara">Maskara</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Harga:</label>
+                    <select id="price-filter">
+                        <option value="all">Semua Harga</option>
+                        <option value="low">Termurah</option>
+                        <option value="high">Termahal</option>
+                        <option value="50-100">Rp 50.000 - 100.000</option>
+                        <option value="100-150">Rp 100.000 - 150.000</option>
+                        <option value="150-200">Rp 150.000 - 200.000</option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="btn-outline">Reset Filter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategori Produk</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="blushon">
+                    <div class="category-icon">
+                        <i class="fas fa-blush"></i>
+                    </div>
+                    <h3>Blush On</h3>
+                    <p>Memberikan warna natural pada pipi</p>
+                </div>
+                <div class="category-card" data-category="cushion">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Cushion</h3>
+                    <p>Foundation praktis dengan coverage sempurna</p>
+                </div>
+                <div class="category-card" data-category="lipstik">
+                    <div class="category-icon">
+                        <i class="fas fa-kiss-wink-heart"></i>
+                    </div>
+                    <h3>Lipstik</h3>
+                    <p>Warna bibir yang tahan lama</p>
+                </div>
+                <div class="category-card" data-category="eyeshadow">
+                    <div class="category-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Eyeshadow</h3>
+                    <p>Palet warna mata yang memukau</p>
+                </div>
+                <div class="category-card" data-category="maskara">
+                    <div class="category-icon">
+                        <i class="fas fa-eye-lashes"></i>
+                    </div>
+                    <h3>Maskara</h3>
+                    <p>Volume dan panjang bulu mata maksimal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Produk Terbaru</h2>
+            <div id="products-container" class="products-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Aulia Cosmetics</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Aulia Cosmetics berdiri sejak 2020 dengan misi memberikan produk kecantikan berkualitas tinggi dengan harga terjangkau untuk wanita Indonesia.</p>
+                    <p>Kami menggunakan bahan-bahan terpilih yang aman untuk kulit dan telah teruji klinis. Semua produk kami halal dan telah mendapatkan sertifikasi BPOM.</p>
+                    <div class="contact-info">
+                        <h3>Hubungi Kami</h3>
+                        <p><i class="fas fa-phone"></i> WhatsApp: <strong>0822-8194-7955</strong></p>
+                        <p><i class="fas fa-envelope"></i> Email: info@auliacosmetics.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Alamat: Jl. Aur Kuning No. 123, Bukittinggi </p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-store"></i>
+                        <p>Toko Aulia Cosmetics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aulia Cosmetics</h3>
+                    <p>Kecantikan alami untuk setiap wanita Indonesia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Kategori</h3>
+                    <ul>
+                        <li><a href="#categories" data-category="blushon">Blush On</a></li>
+                        <li><a href="#categories" data-category="cushion">Cushion</a></li>
+                        <li><a href="#categories" data-category="lipstik">Lipstik</a></li>
+                        <li><a href="#categories" data-category="eyeshadow">Eyeshadow</a></li>
+                        <li><a href="#categories" data-category="maskara">Maskara</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="#">Cara Pembelian</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Pengembalian</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Aulia Cosmetics. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-product-details">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
